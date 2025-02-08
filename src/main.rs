@@ -76,7 +76,7 @@ impl MandelbrotApp {
 impl App for MandelbrotApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         CentralPanel::default().show(ctx, |ui| {
-            ui.heading("Solo Mandlebort Set");
+            ui.heading("Solo Mandelbrot Set");
 
             // Handle mouse wheel for zooming
             let scroll_delta = ctx.input(|i| i.raw_scroll_delta);
@@ -146,7 +146,7 @@ fn main() -> Result<(), Error> {
     };
 
     eframe::run_native(
-        "Solo Mandlebort Set",
+        "Solo Mandelbrot Set",
         native_options,
         Box::new(|_cc| Ok(Box::new(app))),
     )
